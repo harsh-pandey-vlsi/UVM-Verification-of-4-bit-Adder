@@ -1,0 +1,22 @@
+//SCOREBOARD
+        import uvm_pkg::*;
+`include "uvm_macros.svh"
+class adder_scoreboard extends uvm_scoreboard;
+  `uvm_component_utils(adder_scoreboard)
+  uvm_analysis_imp #(adder_txn, adder_scoreboard) imp;
+  
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+    imp = new("imp", this);
+  endfunction
+  
+  function void write(adder_txn txn);
+    bit[3:0] expected;
+    expected = txn.a + txn.b;
+    if(txn.sum !== expected)
+      `uvm_error("SCOREBOARD", $sformatf("Mismatch: a=%0d b=%od sum=%od expected=%0d", txn.a, txn.b, txn.sum, expected))
+      else
+        `uvm_info("SCOREBOARD", "PASS", UVM_LOW)
+        endfunction
+        
+        endclass
