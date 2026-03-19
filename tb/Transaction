@@ -1,0 +1,14 @@
+//TRANSACTION CLASS
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+class adder_txn extends uvm_sequence_item;
+  rand bit [3:0] a;
+  rand bit [3:0] b;
+  bit [3:0] sum;
+  
+  `uvm_object_utils(adder_txn)
+  
+  function new(string name = "adder_txn");
+    super.new(name);
+  endfunction
+endclass
