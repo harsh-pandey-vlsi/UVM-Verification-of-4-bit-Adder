@@ -1,0 +1,20 @@
+//SEQUENCE CLASS
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+class adder_sequence extends uvm_sequence #(adder_txn);
+  `uvm_object_utils(adder_sequence)
+  
+  function new(string name = "adder_sequence");
+    super.new(name);
+  endfunction
+  
+  virtual task body();
+    adder_txn txn;
+    repeat (10) begin
+      txn = adder_txn::type_id::create("txn");
+      assert(txn.randomize());
+      start_item(txn);
+      finish_item(txn);
+    end
+  endtask
+endclass
