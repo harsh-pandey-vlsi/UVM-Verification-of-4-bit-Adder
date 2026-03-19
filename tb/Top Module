@@ -1,0 +1,23 @@
+//TOP MODULE
+module tb_top;
+  import uvm_pkg::*;
+  `include "uvm_macros.svh"
+  adder_if vif();
+  
+  adder dut(
+    .a(vif.a),
+    .b(vif.b),
+    .sum(vif.sum)
+  );
+  initial begin
+    uvm_config_db#(virtual adder_if)::set(null, "*", "vif", vif);
+    run_test("adder_test");
+  end
+  
+  initial begin 
+    $dumpfile("wave.vcd");
+    $dumpvars(0,tb_top);
+  end
+endmodule
+      
+          
