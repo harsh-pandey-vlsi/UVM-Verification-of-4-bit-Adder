@@ -1,0 +1,33 @@
+    import uvm_pkg::*;
+`include "uvm_macros.svh"
+    class adder_monitor extends uvm_monitor;
+      `uvm_component_utils(adder_monitor)
+      
+      virtual adder_if vif;
+      uvm_analysis_port #(adder_txn) ap;
+      
+      function new(string name, uvm_component parent);
+        super.new(name, parent);
+        ap = new("ap", this);
+      endfunction
+      
+      function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        if (!uvm_config_db#(virtual adder_if)::get(this,"","vif",vif))
+          `uvm_fatal("MON", "No interface connected")
+          endfunction
+          
+          virtual task run_phase(uvm_phase phase);
+        adder_txn txn;
+        
+        forever begin
+          txn = adder_txn::type_id::create("txn");
+          #1;
+          txn.a=vif.a;
+          txn.b=vif.b;
+          txn.sum=vif.sum;
+          ap.write(txn);
+        end
+        endtask
+        endclass
+      
