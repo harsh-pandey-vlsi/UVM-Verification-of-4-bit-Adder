@@ -1,0 +1,65 @@
+
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO /usr/share/questa/questasim/verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test adder_test...
+# UVM_INFO testbench.sv(128) @ 1: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 2: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 3: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 4: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 5: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 6: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 7: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 8: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 9: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 10: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 11: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 12: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 13: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 14: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 15: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 16: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 17: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 18: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 19: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO testbench.sv(128) @ 20: uvm_test_top.env.sb [SCOREBOARD] PASS
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_objection.svh(1270) @ 20: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_report_server.svh(847) @ 20: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   25
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCOREBOARD]    20
+# [TEST_DONE]     1
+# [UVM/RELNOTES]     1
+# 
+# ** Note: $finish    : /usr/share/questa/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 20 ns  Iteration: 68  Instance: /tb_top
+# End time: 15:52:00 on Mar 19,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+End time: 15:52:00 on Mar 19,2026, Elapsed time: 0:00:12
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vlog: Errors:   0, Warnings:   0
+    vopt: Errors:   0, Warnings:   1
+    vsim: Errors:   0, Warnings:   0
+  Totals: Errors:   0, Warnings:   1
+Finding VCD file...
+./wave.vcd
